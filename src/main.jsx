@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       {
         path: "/details-card/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/movie/${params.id}`),
+          fetch(`https://movie-portal-server-nine-orcin.vercel.app/movie/${params.id}`),
         element: (
           <PrivateRoute>
             <DetailsCard></DetailsCard>
@@ -70,7 +70,7 @@ const router = createBrowserRouter([
       {
         path: "/edit-movie/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/movie/${params.id}`),
+          fetch(`https://movie-portal-server-nine-orcin.vercel.app/movie/${params.id}`),
         element: (
           <PrivateRoute>
             <EditMovie></EditMovie>

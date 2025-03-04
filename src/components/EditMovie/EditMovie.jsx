@@ -87,7 +87,7 @@ const EditMovie = () => {
       validateTitle(title) &&
       validateDuration(duration)
     ) {
-      fetch(`http://localhost:3000/movie/${_id}`, {
+      fetch(`https://movie-portal-server-nine-orcin.vercel.app/movie/${_id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "Application/json",

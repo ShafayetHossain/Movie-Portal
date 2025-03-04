@@ -85,7 +85,7 @@ const Addmovie = () => {
       validateTitle(title) &&
       validateDuration(duration)
     ) {
-      fetch("http://localhost:3000/movie", {
+      fetch("https://movie-portal-server-nine-orcin.vercel.app/movie", {
         method: "POST",
         headers: {
           "Content-Type": "Application/json",

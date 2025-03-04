@@ -6,7 +6,7 @@ const AllMovie = () => {
   const { movies, setMovies, userAcount } = useContext(ContextProvider);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/movie?searchEmail=${userAcount?.email}`)
+    fetch(`https://movie-portal-server-nine-orcin.vercel.app/movie?searchEmail=${userAcount?.email}`)
       .then((res) => res.json())
       .then((result) => setMovies(result));
   }, [userAcount?.email]);
@@ -14,7 +14,7 @@ const AllMovie = () => {
   const handleSearch = (event) => {
     let search = event.target.value;
     fetch(
-      `http://localhost:3000/movie?searchEmail=${userAcount?.email}&&searchMovie=${search}`
+      `https://movie-portal-server-nine-orcin.vercel.app/movie?searchEmail=${userAcount?.email}&&searchMovie=${search}`
     )
       .then((res) => res.json())
       .then((result) => setMovies(result));

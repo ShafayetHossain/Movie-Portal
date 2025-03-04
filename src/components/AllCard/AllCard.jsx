@@ -22,7 +22,7 @@ const AllCard = ({ movie }) => {
       : notifyWarning("Remove From Favorite");
 
     const updateFavorite = { favorite: !isFavorite };
-    fetch(`http://localhost:3000/favoritemovie/${id}`, {
+    fetch(`https://movie-portal-server-nine-orcin.vercel.app/favoritemovie/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -48,7 +48,7 @@ const AllCard = ({ movie }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/movie/${id}`, {
+        fetch(`https://movie-portal-server-nine-orcin.vercel.app/movie/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
