@@ -99,7 +99,7 @@ const Addmovie = () => {
               title: "Good job!",
               text: "Movie Insert Successfully!",
               icon: "success",
-            }).then(() => navigate("/"));
+            }).then(() => navigate("/all-movie"));
           }
         });
     }
